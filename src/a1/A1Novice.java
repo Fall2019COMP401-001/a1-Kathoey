@@ -66,6 +66,7 @@ public class A1Novice {
 		}
 		
 		scan.close();
+		//this is supremely dumb
 		
 		for(int i = 0; i<count; i++) {
 			System.out.println(fname[i].charAt(0) + ". " + lname[i] + ": " + String.format("%.2f",(double) totalCost[i]));
