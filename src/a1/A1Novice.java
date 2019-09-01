@@ -2,6 +2,8 @@ package a1;
 
 import java.util.Scanner;
 
+
+
 public class A1Novice {
 
 	public static void main(String[] args) {
@@ -56,7 +58,9 @@ public class A1Novice {
 					quantityArr[i][ii] = scan.nextInt();
 					nameArr[i][ii] = scan.next();
 					priceArr[i][ii] = scan.nextDouble();
-					sumCost = sumCost + (quantityArr[i][ii] * priceArr[i][ii]);
+					for(int iii = 0; iii<quantityArr[i][ii]; iii++) {
+					sumCost = sumCost + priceArr[i][ii];
+					}
 			}
 			totalCost[i] = sumCost;
 		}
@@ -64,7 +68,7 @@ public class A1Novice {
 		scan.close();
 		
 		for(int i = 0; i<count; i++) {
-			System.out.println(fname[i].charAt(0) + ". " + lname[i] + ": " + totalCost[i]);
+			System.out.println(fname[i].charAt(0) + ". " + lname[i] + ": " + String.format("%.2f",(double) totalCost[i]));
 		}
 	
 	}
